@@ -1,0 +1,87 @@
+/* Gamon - Digital Gaming and Esports HTML Template  */
+
+@media only screen and (max-width: 7000px){
+	.page-wrapper{
+		overflow: hidden;
+	}
+
+	.main-header .header-upper .logo img{
+		margin-top: 55px;
+	}
+}
+
+
+@media only screen and (max-width: 1023px){
+	.main-header .nav-outer .main-menu,
+	.sticky-header{
+		display: none !important;
+	}
+
+	.nav-outer .mobile-nav-toggler{
+		display: block;
+		margin: 0;
+		padding: 24px 0;
+	}
+	
+	.main-header .header-upper .nav-outer:before{
+		display:none;	
+	}
+
+	.main-header .header-upper .logo img{
+		margin: 0 0 55px 10px;
+		padding-bottom: 8px;
+	}
+	
+	.main-header .header-upper .logo-outer{
+		position:relative;
+		left:0;
+		top:0;
+		width:auto;
+		height:auto;
+		padding:15px 0px;
+		margin:0;
+		float:left;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);	
+	}
+	
+	.main-header .nav-outer{
+		width:auto;
+		float:right;	
+	}
+	
+	.main-footer .footer-bottom{
+		text-align:center;
+		padding-top:60px;	
+	}
+	
+	.main-footer .footer-bottom .column{
+		width:100%;
+	}
+	
+	.main-footer .footer-bottom .social-icons{
+		padding-top:20px;
+		text-align:center;	
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 599px){
+	.main-header .header-top .top-left{
+		display:none;	
+	}
+	
+	.main-header .header-top .top-right{
+		width:100%;
+		text-align:center	
+	}
+}
