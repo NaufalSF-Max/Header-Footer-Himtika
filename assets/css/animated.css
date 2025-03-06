@@ -4,3 +4,12 @@
     100% { transform: translate(-100%, 0); }
 }
 /* End Live News */
+
+@keyframes gearAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}

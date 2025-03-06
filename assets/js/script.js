@@ -14,22 +14,39 @@
 	function headerStyle() {
 		if($('.main-header').length){
 			var windowpos = $(window).scrollTop();
-			var siteHeader = $('.main-header');
+			var headerUpper = $('.header-upper');
+			var headerTop = $('.header-top');
 			var scrollLink = $('.scroll-to-top');
-			var sticky_header = $('.main-header .sticky-header');
-			if (windowpos > 100) {
-				siteHeader.addClass('fixed-header');
-				sticky_header.addClass("animated slideInDown");
-				scrollLink.fadeIn(300);
+			
+			// Cek jika scroll lebih dari 100px
+			if (windowpos > 136) {
+				// Menambahkan kelas sticky pada header-upper
+				headerUpper.addClass('sticky');
+				// Menyembunyikan header-top
+				headerTop.fadeOut(300);
+				// Menampilkan scroll-to-top
+				scrollLink.fadeIn(1000);
 			} else {
-				siteHeader.removeClass('fixed-header');
-				sticky_header.removeClass("animated slideInDown");
+				// Menghapus kelas sticky pada header-upper
+				headerUpper.removeClass('sticky');
+				// Menampilkan kembali header-top
+				headerTop.fadeIn(300);
+				// Menyembunyikan scroll-to-top
 				scrollLink.fadeOut(300);
 			}
 		}
 	}
 	
+	$(window).on('scroll', function() {
+		headerStyle();
+	});
+	
+	
 	headerStyle();
+
+	$(window).on('scroll', function() {
+		headerStyle();
+	});
 
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
@@ -73,14 +90,6 @@
 	
 		});
 	}
-
-/* ==========================================================================
-   When document is Scrollig, do
-   ========================================================================== */
-	
-	$(window).on('scroll', function() {
-		headerStyle();
-	});
 	
 	// Loading masuk page akan di gantikan dengan fungsi berikut
 	
