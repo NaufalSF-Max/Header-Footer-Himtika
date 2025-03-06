@@ -1061,10 +1061,6 @@ footer {
     font-size: 18px;
 }
 
-.footer-bottom .whatsapp-icon:hover {
-    background-color: #20b259;
-}
-
 .social-icons {
     display: flex;
     justify-content: center;
